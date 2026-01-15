@@ -251,7 +251,7 @@ section:nth-child(6) {
         gap: 20px;
         font-size: 16px;
         line-height: 26px;
-        color: $dark
+        color: $darkgit
     }
 }
 @media (max-width: 950px) {
@@ -306,6 +306,14 @@ section:nth-child(6) {
         }
         .project-title {
             font-size: 30px;
+}
+.resume-btn {
+    padding: 17px 20px;
+    border-radius: 8px;
+    color: $light;
+    background-color:  $dark;
+}
+
         }
         .project-description {
             color: $light
@@ -317,7 +325,7 @@ section:nth-child(6) {
         border-radius: 8px;
         margin-right: auto;
     }
-}
+
 
 .project:nth-child(even) {
     .project-image {
@@ -378,10 +386,3 @@ section:nth-child(6) {
     @media (max-width: 735px){
         display: block;
     }
-}
-.resume-btn {
-    padding: 17px 20px;
-    border-radius: 8px;
-    color: $light;
-    background-color:  $dark;
-}
