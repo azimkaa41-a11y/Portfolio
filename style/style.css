@@ -253,6 +253,16 @@ section:nth-child(6) {
   justify-content: space-between;
   gap: 123px;
 }
+@media (max-width: 1024) {
+  .about {
+    gap: 40px;
+  }
+}
+@media (max-width: 475) {
+  .about {
+    gap: 24px;
+  }
+}
 
 .avatar-wrapper {
   flex-shrink: 0;

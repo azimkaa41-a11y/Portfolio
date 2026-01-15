@@ -159,7 +159,6 @@ section:nth-child(6) {
     }
 }
 
-
 .white {
     color: $light;
     padding: 100px 0;
@@ -227,6 +226,12 @@ section:nth-child(6) {
     display: flex;
     justify-content: space-between;
     gap: 123px;
+    @media (max-width: 1024) {
+        gap: 40px;  
+    }
+    @media (max-width: 475) {
+        gap:24px;
+    }
 }
 .avatar-wrapper {
     flex-shrink: 0;
