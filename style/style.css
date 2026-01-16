@@ -44,16 +44,35 @@ section:nth-child(6) {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 32px;
+}
+@media (max-width: 955px) {
+  .container {
+    max-width: 880px;
+  }
+}
+@media (max-width: 723px) {
+  .container {
+    max-width: 648px;
+  }
+}
+@media (max-width: 475px) {
+  .container {
+    max-width: 440px;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    max-width: 320px;
+  }
 }
 
 .header {
   font-size: 48px;
   text-align: center;
   margin-bottom: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+.header span {
+  font-weight: 600;
 }
 @media (max-width: 725px) {
   .header {
@@ -253,12 +272,12 @@ section:nth-child(6) {
   justify-content: space-between;
   gap: 123px;
 }
-@media (max-width: 1024) {
+@media (max-width: 1024px) {
   .about {
     gap: 40px;
   }
 }
-@media (max-width: 475) {
+@media (max-width: 475px) {
   .about {
     gap: 24px;
   }
@@ -342,10 +361,17 @@ section:nth-child(6) {
 .project .project-info .project-title {
   font-size: 30px;
 }
-.project .project-info .project-description {
+.project .project-info .resume-btn {
+  padding: 17px 20px;
+  border-radius: 8px;
+  color: white;
+  background-color: black;
+}
+.project .project-description {
   color: white;
 }
-.project .more-btn {
+
+.more-btn {
   display: block;
   padding: 16px 20px;
   border-radius: 8px;
@@ -381,6 +407,79 @@ section:nth-child(6) {
   justify-content: space-between;
   gap: 123px;
 }
+@media (max-width: 955px) {
+  .call-me {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .call-me .contacts .description {
+    width: 880px;
+  }
+  .call-me .form .input {
+    width: 880px;
+  }
+  .call-me .form .contact-icons {
+    width: 880px;
+  }
+  .call-me .form .contact-icons .get-btn {
+    width: 528px;
+  }
+}
+@media (max-width: 723px) {
+  .call-me .contacts .description {
+    width: 646px;
+    font-size: 16px;
+  }
+  .call-me .form .input {
+    width: 646px;
+  }
+  .call-me .form .contact-icons {
+    width: 646px;
+  }
+  .call-me .form .contact-icons .get-btn {
+    width: 294px;
+  }
+  .call-me .form .contact-icons .form-links .hero-icon {
+    width: 64px;
+    height: 64px;
+  }
+}
+@media (max-width: 475px) {
+  .call-me .contacts .description {
+    width: 440px;
+    font-size: 15px;
+  }
+  .call-me .form .input {
+    width: 440px;
+  }
+  .call-me .form .contact-icons {
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+  }
+  .call-me .form .contact-icons .get-btn {
+    width: 440px;
+  }
+}
+@media (max-width: 360px) {
+  .call-me .contacts .description {
+    width: 320px;
+  }
+  .call-me .form .input {
+    width: 320px;
+  }
+  .call-me .form .contact-icons {
+    width: 320px;
+  }
+  .call-me .form .contact-icons .get-btn {
+    width: 320px;
+  }
+  .call-me .form .contact-icons .form-links .hero-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
 
 .email,
 .phone {
@@ -398,6 +497,23 @@ section:nth-child(6) {
   align-items: center;
   padding: 20px 0;
 }
+@media (max-width: 955px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+@media (max-width: 955px) {
+  .mobile {
+    display: flex;
+  }
+}
 
 .nav-list {
   display: flex;
@@ -409,19 +525,60 @@ section:nth-child(6) {
   }
 }
 
-.burger-menu {
-  font-size: 32px;
-  display: none;
-}
-@media (max-width: 735px) {
-  .burger-menu {
-    display: block;
-  }
-}
-
 .resume-btn {
   padding: 17px 20px;
   border-radius: 8px;
   color: white;
   background-color: black;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+.form .input {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  width: 495px;
+  border-radius: 8px;
+}
+.form .textarea {
+  height: 200px;
+}
+.form .contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+@media (max-width: 465px) {
+  .form .contact-icons {
+    display: flex;
+    align-items: start;
+  }
+}
+.form .get-btn {
+  padding: 21px 20px;
+  border-radius: 8px;
+  color: white;
+  background-color: black;
+}
+.form .form-links {
+  gap: 24px;
+}
+
+.contacts h2 {
+  padding-top: 98px;
+}
+
+footer {
+  background: #000;
+  padding: 30px;
+}
+
+.menu-btn {
+  background-color: transparent;
+  font-size: 32px;
 }/*# sourceMappingURL=style.css.map */
